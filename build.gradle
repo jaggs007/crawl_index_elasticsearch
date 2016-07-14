@@ -1,0 +1,25 @@
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.elasticsearch:elasticsearch:1.7.4'
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    
+    
+}
+
+sourceSets {
+   main {
+       java {
+           srcDir 'src/main/java'
+       }
+       resources {
+           srcDir 'src/main/resources'
+       }
+   }
+}
